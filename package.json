@@ -1,0 +1,175 @@
+{
+  "name": "pinedoro",
+  "displayName": "Pinedoro Timer",
+  "description": "Beautiful, minimalist productivity timer with tree-themed growth visualization and comprehensive coding activity tracking",
+  "version": "1.0.0",
+  "publisher": "local",
+  "author": {
+    "name": "Pinedoro Team"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/pinedoro/pinedoro-vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinedoro/pinedoro-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pinedoro/pinedoro-vscode/issues"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer",
+    "productivity",
+    "focus",
+    "coding",
+    "statistics",
+    "minimalist",
+    "tree",
+    "growth",
+    "ambient",
+    "sounds",
+    "developer",
+    "session",
+    "tracking"
+  ],
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Other",
+    "Extension Packs"
+  ],
+  "preview": false,
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#2d5a27",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onCommand:pinedoro.startFocus",
+    "onCommand:pinedoro.startBreak",
+    "onCommand:pinedoro.stopTimer",
+    "onCommand:pinedoro.resetTimer",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+      "commands": [
+          {
+              "command": "pinedoro.startFocus",
+              "title": "🌱 Start Focus Session",
+              "category": "Pinedoro",
+              "icon": "$(tree)"
+          },
+          {
+              "command": "pinedoro.startBreak",
+              "title": "🍃 Start Break",
+              "category": "Pinedoro",
+              "icon": "$(leaf)"
+          },
+          {
+              "command": "pinedoro.stopTimer",
+              "title": "⏹️ Stop Timer",
+              "category": "Pinedoro",
+              "icon": "$(debug-stop)"
+          },
+          {
+              "command": "pinedoro.resetTimer",
+              "title": "🔄 Reset Timer",
+              "category": "Pinedoro",
+              "icon": "$(refresh)"
+          },
+          {
+              "command": "pinedoro.startLongBreak",
+              "title": "🌳 Start Long Break (15min)",
+              "category": "Pinedoro",
+              "icon": "$(tree)"
+          },
+          {
+              "command": "pinedoro.pauseTimer",
+              "title": "⏸️ Pause Timer",
+              "category": "Pinedoro",
+              "icon": "$(debug-pause)"
+          },
+          {
+              "command": "pinedoro.resumeTimer",
+              "title": "▶️ Resume Timer",
+              "category": "Pinedoro",
+              "icon": "$(play)"
+          },
+          {
+              "command": "pinedoro.showStats",
+              "title": "📊 Show Statistics",
+              "category": "Pinedoro",
+              "icon": "$(graph)"
+          },
+          {
+              "command": "pinedoro.test",
+              "title": "✅ Test Commands",
+              "category": "Pinedoro",
+              "icon": "$(check)"
+          },
+          {
+              "command": "pinedoro.customTimer",
+              "title": "⏰ Custom Timer",
+              "category": "Pinedoro",
+              "icon": "$(clock)"
+          },
+          {
+              "command": "pinedoro.playLofi",
+              "title": "🎵 Play Forest Sounds",
+              "category": "Pinedoro",
+              "icon": "$(unmute)"
+          },
+          {
+              "command": "pinedoro.playRain",
+              "title": "🌧️ Play Rain Sounds",
+              "category": "Pinedoro", 
+              "icon": "$(cloud)"
+          },
+          {
+              "command": "pinedoro.stopSounds",
+              "title": "🔇 Stop Ambient Sounds",
+              "category": "Pinedoro",
+              "icon": "$(mute)"
+          },
+          {
+              "command": "pinedoro.soundMenu",
+              "title": "🎧 Ambient Sound Menu",
+              "category": "Pinedoro",
+              "icon": "$(music)"
+          },
+          {
+              "command": "pinedoro.test",
+              "title": "✅ Test Growth Commands",
+              "category": "Pinedoro",
+              "icon": "$(check)"
+          },
+          {
+              "command": "pinedoro.exportStats",
+              "title": "📊 Export Statistics",
+              "category": "Pinedoro",
+              "icon": "$(export)"
+          }
+      ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
