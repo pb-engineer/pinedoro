@@ -3,7 +3,7 @@
   "displayName": "Pinedoro Timer",
   "description": "Beautiful, minimalist productivity timer with tree-themed growth visualization and comprehensive coding activity tracking",
   "version": "1.0.0",
-  "publisher": "local",
+  "publisher": "singularity-tech",
   "author": {
     "name": "Pinedoro Team"
   },
@@ -11,7 +11,7 @@
   "homepage": "https://github.com/pinedoro/pinedoro-vscode",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinedoro/pinedoro-vscode.git"
+    "url": "https://github.com/pb-engineer/pinedoro"
   },
   "bugs": {
     "url": "https://github.com/pinedoro/pinedoro-vscode/issues"
